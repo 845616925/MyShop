@@ -114,7 +114,7 @@ public class ProductDao {
 
     public List<Map<String, Object>> findOrderItemByOid(String oid) throws SQLException {
         QueryRunner runner = new QueryRunner(DataSourceUtils.getDataSource());
-        String sql = "select i.itemid,i.count,i.subtotal,p.pimage,p.pname,p.shop_price from orderItem i,product p where i.pid=p.pid and i.oid=?";
+        String sql = "select i.itemid,i.count,i.subtotal,p.pimage,p.pname,p.shop_price from orderitem i,product p where i.pid=p.pid and i.oid=?";
         List<Map<String, Object>> mapList = runner.query(sql, new MapListHandler(), oid);
         return mapList;
     }

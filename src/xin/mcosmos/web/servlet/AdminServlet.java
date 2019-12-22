@@ -33,6 +33,16 @@ public class AdminServlet extends BaseServlet {
         request.getRequestDispatcher("/admin/category/list.jsp").forward(request, response);
 
     }
+    public void findAllCategoryShowList(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        AdminService service = new AdminService();
+        List<Category> category = service.findAllCategory();
+       Gson gson = new Gson();
+        String s = gson.toJson(category);
+        response.setContentType("text/html;charset=UTF-8");
+        response.getWriter().write(s);
+
+    }
 
     public void showProduct(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {

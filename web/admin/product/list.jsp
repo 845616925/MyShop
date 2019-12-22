@@ -81,30 +81,6 @@
                             </a></td>
                         </tr>
                     </c:forEach>
-                    <%--<tr onmouseover="this.style.backgroundColor = 'white'"
-                        onmouseout="this.style.backgroundColor = '#F5FAFE';">
-                        <td style="CURSOR: hand; HEIGHT: 22px" align="center"
-                            width="18%">1</td>
-                        <td style="CURSOR: hand; HEIGHT: 22px" align="center"
-                            width="17%"><img width="40" height="45" src=""></td>
-                        <td style="CURSOR: hand; HEIGHT: 22px" align="center"
-                            width="17%">电视机</td>
-                        <td style="CURSOR: hand; HEIGHT: 22px" align="center"
-                            width="17%">3000</td>
-                        <td style="CURSOR: hand; HEIGHT: 22px" align="center"
-                            width="17%">是</td>
-                        <td align="center" style="HEIGHT: 22px"><a
-                            href="${ pageContext.request.contextPath }/admin/product/edit.jsp">
-                                <img
-                                src="${pageContext.request.contextPath}/images/i_edit.gif"
-                                border="0" style="CURSOR: hand">
-                        </a></td>
-
-                        <td align="center" style="HEIGHT: 22px"><a href="#"> <img
-                                src="${pageContext.request.contextPath}/images/i_del.gif"
-                                width="16" height="16" border="0" style="CURSOR: hand">
-                        </a></td>
-                    </tr>--%>
                 </table>
             </td>
         </tr>

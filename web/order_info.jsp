@@ -67,14 +67,6 @@
                         </td>
                     </tr>
                 </c:forEach>
-                <%--<td width="60" width="40%"><input type="hidden" name="id"
-                                                  value="22"> <img src="./image/dadonggua.jpg" width="70"
-                                                                   height="60"></td>
-                <td width="30%"><a target="_blank"> 有机蔬菜 大冬瓜...</a></td>
-                <td width="20%">￥298.00</td>
-                <td width="10%">5</td>
-                <td width="15%"><span class="subtotal">￥596.00</span></td>--%>
-
                 </tbody>
             </table>
         </div>

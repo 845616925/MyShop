@@ -27,6 +27,8 @@ public class AdminService {
         try {
             AdminDao dao = new AdminDao();
             dao.saveProduct(product);
+            System.out.println("getPid:"+product.getPid());
+            System.out.println("getPimage:"+product.getPimage());
 
         } catch (SQLException e) {
             e.printStackTrace();

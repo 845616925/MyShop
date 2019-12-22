@@ -89,7 +89,7 @@ public class ProductServlet extends BaseServlet {
                 if ("pids".equals(cookie.getName())) {
                     pids = cookie.getValue();
 
-                    String[] split = pids.split("-");
+                    String[] split = pids.split(":");
                     List<String> strings = Arrays.asList(split);
                     LinkedList<String> list = new LinkedList(strings);
                     //是否存在当前pid
@@ -103,13 +103,14 @@ public class ProductServlet extends BaseServlet {
 
                     for (int i = 0; i < list.size(); i++) {
                         buffer.append(list.get(i));
-                        buffer.append("-");
+                        buffer.append(":");
                     }
                     pids = buffer.substring(0, buffer.length() - 1);
 
                 }
             }
         }
+        System.out.println(pids);
         Cookie cookie_pids = new Cookie("pids", pids);
         response.addCookie(cookie_pids);
 
@@ -148,7 +149,7 @@ public class ProductServlet extends BaseServlet {
             for (Cookie cookie : cookies) {
                 if ("pids".equals(cookie.getName())) {
                     String pids = cookie.getValue();
-                    String[] split = pids.split("-");
+                    String[] split = pids.split(":");
                     for (String pid : split) {
                         Product product = service.findProductByPid(pid);
                         historyProductList.add(product);
@@ -405,6 +406,7 @@ public class ProductServlet extends BaseServlet {
 
         request.getRequestDispatcher("/order_list.jsp").forward(request, response);
     }
+
 
 
 }

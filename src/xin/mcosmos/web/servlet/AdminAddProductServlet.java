@@ -95,4 +95,5 @@ public class AdminAddProductServlet extends HttpServlet {
             throws ServletException, IOException {
         doGet(request, response);
     }
+
 }

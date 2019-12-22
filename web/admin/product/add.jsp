@@ -8,7 +8,7 @@
     <script type="text/javascript">
         $(function () {
             $.post(
-                "${pageContext.request.contextPath}/admin?method=findAllCategory",
+                "${pageContext.request.contextPath}/admin?method=findAllCategoryShowList",
                 function (data) {
                     var content = "";
                     for (var i = 0; i < data.length; i++) {
@@ -83,11 +83,6 @@
             </td>
             <td class="ta_01" bgColor="#ffffff" colspan="3">
                 <select id="cid" name="cid">
-
-                    <%-- <option value="">大型电器</option>
-                     <option value="">手机数码</option>
-                     <option value="">衣帽箱包</option>--%>
-
                 </select>
             </td>
         </tr>
